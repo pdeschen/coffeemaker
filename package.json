@@ -1,0 +1,10 @@
+{
+  "name": "coffeemaker",
+  "description": "Build system",
+  "version": "0.0.1",
+  "author": "Pascal Deschenes <pdeschen@rassemblr.com>",
+  "keywords": ["build"],
+  "directories": { "lib": "./lib/coffeemaker" },
+  "main": "./lib/dox/index",
+  "bin": { "coffeemaker": "./bin/coffeemaker" }
+}
