@@ -7,7 +7,8 @@
 
 ## Features
 
-  * Syntax highlighting
+  * Basic task dependency support
+  * Basic template rendering and i18n support  
 
 ## Installation
 
@@ -35,7 +36,7 @@ With spec file location and target list
 
 ## Usage
 
-Output from `--help`:
+Output from `-h`:
 
     Usage: coffeemaker [-f buildspec] [target1, target2, ...]
 
@@ -52,7 +53,7 @@ Output from `--help`:
 
 (The MIT License)
 
-Copyright (c) 2009 TJ Holowaychuk &lt;tj@vision-media.ca&gt;
+Copyright (c) 2011 Pascal Deschenes
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
