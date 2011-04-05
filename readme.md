@@ -8,7 +8,8 @@
 ## Features
 
   * Basic task dependency support
-  * Basic template rendering and i18n support  
+  * Basic template rendering and i18n support
+  * Http serve task helper  
 
 ## Installation
 
@@ -44,6 +45,22 @@ Output from `-h`:
 	  -f       Build spec.js location (default to ./spec.js
 	  -h       Display help information
 	  -v       Display version number
+
+## Todo
+
+  * Add doc as an helper
+  * Add mustache as an helper
+  * Add file modification listener for task relaunch
+  * Add jslint helper
+  * Add minify helper
+  * Add test case helper
+  * Add generation of npm package.json helper
+  * Add release version helper
+
+## Known Bugs
+
+  * Task dependencies does not detect infinite loop
+  * Lots of error handling missing
 
 ## Contributors
 
