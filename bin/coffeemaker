@@ -1,9 +1,13 @@
 #!/usr/bin/env node
 
-/*!
- * coffeemaker
- * Copyright (c) 2011 Pascal Deschenes <pdeschen@rassemblr.com>
- * MIT Licensed
- */
-
-require('coffeemaker').build(process.argv.slice(2));
+var $cm;
+try {
+    $cm = require('coffeemaker');
+}
+catch(exception) {
+    // load locally 
+    if (!$cm) {
+        $cm = require('../lib/coffeemaker/index.js');
+    }
+}
+$cm.parse();
