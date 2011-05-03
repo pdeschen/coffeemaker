@@ -48,12 +48,12 @@ Output from `-h`:
 
 ## Todo
 
-  * Add doc as an helper
+  * Add doc as an helper (dox)
   * Add mustache as an helper
   * Add file modification listener for task relaunch
-  * Add jslint helper
-  * Add minify helper
-  * Add test case helper
+  * Add lint helper (jslint)
+  * Add minify helper (https://github.com/mishoo/UglifyJS)
+  * Add TDD helper (expresso)
   * Add generation of npm package.json helper
   * Add release version helper
 
