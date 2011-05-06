@@ -1,9 +1,11 @@
 var util = require('util');
 var fileset = require('./../../lib/coffeemaker/plugins/fileset.js');
 
+var location = fileset.expend('./');
+console.log(location);
+
 fileset.mkdirs('/var/tmp/foo1/bar1/foo2/bar2');
 fileset.copy('.', '/var/tmp/foobar');
-fileset.del('/var/tmp/foobar');
 
 var list = fileset.listSync('.');
 console.log(list);
@@ -26,5 +28,4 @@ var callback = function(err, file) {
 
 fileset.list('../', callback);
 
-
-
+fileset.del('/var/tmp/foobar');
