@@ -2,14 +2,16 @@
 
  CoffeeMaker is a JavaScript basic build system written for [node](http://nodejs.org).
 
- CoffeeMaker is a 4.333 hour project of in part, my interest in learning more about node, commonjs and some other
- javascript neat stuff. To my knowledge, there are currently no build system running over node.
+ CoffeeMaker started as a 4.333 hour project of in part, my interest in learning more about node, commonjs and some other
+ javascript neat stuff (TM) while crafting a little static web site. To my knowledge, there are currently no build system 
+ running over node.
 
 ## Features
 
   * Basic task dependency support
   * Basic template rendering and i18n support
   * Http serve task helper  
+  * Some fileset helper methods
 
 ## Installation
 
@@ -33,32 +35,36 @@ With spec file location
 
 With spec file location and target list
 
-    $ coffeemaker -f /some/path/spec.js [doc,archive]
+    $ coffeemaker -f /some/path/spec.js --targets doc,archive
 
 ## Usage
 
-Output from `-h`:
+Output from `--help`:
 
-    Usage: coffeemaker [-f buildspec] [target1, target2, ...]
+    Usage:
+      CoffeeMaker [OPTIONS] <command> [ARGS]
+    
+    Options: 
+      -f, --file [PATH]      Spec file (Default is ./spec.js)
+          --targets [STRING] Target in comma seperated list (Default is all)
+      -v, --version          Display the current version
+      -h, --help             Display help and usage details
 
-	Options:
-	  -f       Build spec.js location (default to ./spec.js
-	  -h       Display help information
-	  -v       Display version number
 
 ## Todo
 
-  * Add doc as an helper (dox)
-  * Add mustache as an helper
+  * Add doc as an helper (dox?)
   * Add file modification listener for task relaunch
   * Add lint helper (jslint)
   * Add minify helper (https://github.com/mishoo/UglifyJS)
-  * Add TDD helper (expresso)
+  * Add TDD helper (expresso? jasmine?)
   * Add generation of npm package.json helper
   * Add release version helper
+  * Add helper for license in code insertion? (through template?)
 
-## Known Bugs
+## Known Bugs and Issues
 
+  * Task dependencies does follow phony principles
   * Task dependencies does not detect infinite loop
   * Lots of error handling missing
 
