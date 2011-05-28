@@ -1,19 +1,17 @@
-# CoffeeMaker
+h1. CoffeeMaker
 
- CoffeeMaker is a JavaScript basic build system written for [node](http://nodejs.org).
+CoffeeMaker is a JavaScript basic build system written for "node":http://nodejs.org.
 
- CoffeeMaker started as a 4.333 hour project of in part, my interest in learning more about node, commonjs and some other
- javascript neat stuff (TM) while crafting a little static web site. To my knowledge, there are currently no build system 
- running over node.
+CoffeeMaker started as a 4.333 hour project of in part, my interest in learning more about node, commonjs and some other JavaScript neat stuff (TM) while crafting a little static web site. To my knowledge, there are currently no build system running over node.
 
-## Features
+h2. Features
 
-  * Basic task dependency support
-  * Basic template rendering and i18n support
-  * Http serve task helper  
-  * Some fileset helper methods
+* Basic task dependency support
+* Basic template rendering and i18n support
+* Http serve task helper  
+* Some fileset helper methods
 
-## Installation
+h2. Installation
 
 Install from npm:
 
@@ -23,7 +21,7 @@ Install from git clone or tarball:
 
     $ node coffeemaker.js
 
-## Usage Examples
+h2. Usage Examples
 
 Simple example:
 
@@ -37,10 +35,11 @@ With spec file location and target list
 
     $ coffeemaker -f /some/path/spec.js --targets doc,archive
 
-## Usage
+h2. Usage
 
 Output from `--help`:
 
+<pre>
     Usage:
       CoffeeMaker [OPTIONS] <command> [ARGS]
     
@@ -49,30 +48,30 @@ Output from `--help`:
           --targets [STRING] Target in comma seperated list (Default is all)
       -v, --version          Display the current version
       -h, --help             Display help and usage details
+</pre>
 
+h2. Todo
 
-## Todo
+* Add doc as an helper (dox?)
+* Add file modification listener for task relaunch
+* Add lint helper (jslint)
+* Add minify helper (https://github.com/mishoo/UglifyJS)
+* Add TDD helper (expresso? jasmine?)
+* Add generation of npm package.json helper
+* Add release version helper
+* Add helper for license in code insertion? (through template?)
 
-  * Add doc as an helper (dox?)
-  * Add file modification listener for task relaunch
-  * Add lint helper (jslint)
-  * Add minify helper (https://github.com/mishoo/UglifyJS)
-  * Add TDD helper (expresso? jasmine?)
-  * Add generation of npm package.json helper
-  * Add release version helper
-  * Add helper for license in code insertion? (through template?)
+h2. Known Bugs and Issues
 
-## Known Bugs and Issues
+* Task dependencies does follow phony principles
+* Task dependencies does not detect infinite loop
+* Lots of error handling missing
 
-  * Task dependencies does follow phony principles
-  * Task dependencies does not detect infinite loop
-  * Lots of error handling missing
+h2. Contributors
 
-## Contributors
+* Pascal Deschenes
 
-  * Pascal Deschenes
-
-## License 
+h2. License 
 
 (The MIT License)
 
